@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>AGRI-NEXUS — Evidence-Driven Regenerative Intelligence</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">A</div>
+      <div><strong>AGRI-NEXUS</strong><span>Field Intelligence</span></div>
+    </div>
+    <button class="nav active" data-view="dashboard">⌂ <span>Field dashboard</span></button>
+    <button class="nav" data-view="memory">◈ <span>Intervention memory</span></button>
+    <button class="nav" data-view="disease">⌁ <span>Disease scan</span></button>
+    <button class="nav" data-view="plan">↻ <span>Regenerative plan</span></button>
+    <button class="nav" data-view="network">◎ <span>BRICS knowledge network</span></button>
+    <div class="sidebar-foot">
+      <span class="dot"></span> Demo intelligence mode
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">AGRI-NEXUS MVP</div>
+        <h1 id="pageTitle">Field dashboard</h1>
+      </div>
+      <div class="farmer">
+        <div class="avatar">RK</div>
+        <div><strong>Ravi Kumar</strong><span>Smallholder • Andhra Pradesh</span></div>
+      </div>
+    </header>
+
+    <section id="dashboard" class="view active">
+      <div class="hero">
+        <div>
+          <span class="pill green">Field health: watch</span>
+          <h2>Your field is entering a water-stress window.</h2>
+          <p>AGRI-NEXUS combined weather outlook, soil moisture and satellite vegetation signals to identify a near-term risk.</p>
+          <div class="actions">
+            <button class="primary" onclick="showAdvisory()">Explain my advisory</button>
+            <button class="secondary" onclick="speakAdvisory()">🔊 Hear advisory</button>
+          </div>
+        </div>
+        <div class="score">
+          <div class="score-ring">78<span>/100</span></div>
+          <small>Resilience signal</small>
+        </div>
+      </div>
+
+      <div class="grid four">
+        <div class="card metric"><span>Soil moisture</span><strong>31%</strong><em class="warn">↓ 8%</em><small>7-day trend</small></div>
+        <div class="card metric"><span>Rainfall forecast</span><strong>18 mm</strong><em class="warn">below normal</em><small>next 10 days</small></div>
+        <div class="card metric"><span>Satellite stress</span><strong>Moderate</strong><em class="ok">NDVI −0.07</em><small>vs. field baseline</small></div>
+        <div class="card metric"><span>Crop stage</span><strong>Flowering</strong><em class="ok">Day 61</em><small>Groundnut</small></div>
+      </div>
+
+      <div class="grid two">
+        <div class="card">
+          <div class="card-head"><div><span class="eyebrow">FARM FINGERPRINT</span><h3>Why the model is concerned</h3></div><span class="confidence">92% data coverage</span></div>
+          <div class="signal"><span>Climate similarity</span><div class="bar"><i style="width:88%"></i></div><b>88%</b></div>
+          <div class="signal"><span>Soil similarity</span><div class="bar"><i style="width:84%"></i></div><b>84%</b></div>
+          <div class="signal"><span>Crop-stage match</span><div class="bar"><i style="width:93%"></i></div><b>93%</b></div>
+          <div class="signal"><span>Historical stress</span><div class="bar amber"><i style="width:76%"></i></div><b>76%</b></div>
+        </div>
+        <div class="card">
+          <div class="card-head"><div><span class="eyebrow">INTERVENTION MEMORY</span><h3>What worked in similar fields?</h3></div><button class="link" onclick="go('memory')">View evidence →</button></div>
+          <div class="case"><span class="country">🇮🇳 India</span><strong>Mulch + staged irrigation</strong><span class="case-score">84% match</span></div>
+          <div class="case"><span class="country">🇧🇷 Brazil</span><strong>Cover crop + reduced tillage</strong><span class="case-score">79% match</span></div>
+          <div class="case"><span class="country">🇿🇦 South Africa</span><strong>Residue retention</strong><span class="case-score">73% match</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="memory" class="view">
+      <div class="section-intro"><span class="pill blue">Evidence engine</span><h2>Intervention memory</h2><p>Search comparable agro-ecological conditions and inspect observed outcomes before making a recommendation.</p></div>
+      <div class="card">
+        <div class="filters"><select><option>Groundnut</option><option>Rice</option><option>Maize</option></select><select><option>Low soil moisture</option><option>High humidity</option></select><button class="primary" onclick="toast('Evidence refreshed from 3 simulated regional nodes')">Find comparable cases</button></div>
+      </div>
+      <div class="grid three">
+        <div class="card case-card"><div class="country-big">🇮🇳</div><h3>Andhra Pradesh</h3><span class="match">84% condition match</span><p>Mulch + staged irrigation</p><div class="result good">Observed: water use −14%</div><div class="result good">Yield: +6%</div><small>31 comparable observations</small></div>
+        <div class="card case-card"><div class="country-big">🇧🇷</div><h3>São Paulo</h3><span class="match">79% condition match</span><p>Cover crop + reduced tillage</p><div class="result good">Soil moisture +11%</div><div class="result neutral">Yield: stable</div><small>18 comparable observations</small></div>
+        <div class="card case-card"><div class="country-big">🇿🇦</div><h3>KwaZulu-Natal</h3><span class="match">73% condition match</span><p>Residue retention</p><div class="result good">Runoff −9%</div><div class="result caution">Disease risk +3%</div><small>27 comparable observations</small></div>
+      </div>
+      <div class="card transfer">
+        <div><span class="eyebrow">TRANSFERABILITY ENGINE</span><h3>Recommended: mulch + staged irrigation</h3></div>
+        <div class="transfer-grid">
+          <div><span>Climate compatibility</span><b>91%</b></div><div><span>Soil compatibility</span><b>84%</b></div><div><span>Crop compatibility</span><b>93%</b></div><div><span>Local evidence</span><b>81%</b></div>
+        </div>
+        <p class="note">The recommendation is not a guarantee. It is selected because comparable evidence is strong across the current farm fingerprint.</p>
+        <button class="primary" onclick="showAdvisory()">Generate localized advisory</button>
+      </div>
+    </section>
+
+    <section id="disease" class="view">
+      <div class="section-intro"><span class="pill red">Multimodal diagnosis</span><h2>Disease scan</h2><p>Image evidence is combined with crop stage and environmental risk instead of treating the photo as the only signal.</p></div>
+      <div class="grid two">
+        <div class="card upload">
+          <div class="drop" id="drop">
+            <div class="upload-icon">⌁</div>
+            <h3>Upload a crop image</h3>
+            <p>JPG/PNG • demo mode</p>
+            <input id="leafInput" type="file" accept="image/*"/>
+          </div>
+          <button class="primary full" onclick="runDisease()">Run multimodal scan</button>
+        </div>
+        <div class="card diagnosis" id="diagnosis">
+          <span class="eyebrow">DIAGNOSTIC RESULT</span>
+          <h3>Waiting for image</h3>
+          <p>Upload a leaf image and run the demo scan.</p>
+        </div>
+      </div>
+      <div class="card warning-box"><strong>Pre-symptom risk:</strong> humidity + recent rainfall + crop-stage signals currently raise fungal-disease risk for the field. This is a prototype alert, not a clinical/agronomic diagnosis.</div>
+    </section>
+
+    <section id="plan" class="view">
+      <div class="section-intro"><span class="pill green">Regenerative transition</span><h2>Season-by-season plan</h2><p>The system avoids a one-time "switch to regenerative" instruction and instead proposes measurable steps.</p></div>
+      <div class="timeline">
+        <div class="card step"><span class="stepno">01</span><div><span class="eyebrow">CURRENT SEASON</span><h3>Protect soil moisture</h3><p>Use residue/mulch where locally practical and stage irrigation around forecast windows.</p><div class="tags"><span>Water resilience</span><span>Low disruption</span></div></div></div>
+        <div class="card step"><span class="stepno">02</span><div><span class="eyebrow">NEXT SEASON</span><h3>Increase biological cover</h3><p>Trial a compatible cover/intercrop option on a small plot and compare outcomes.</p><div class="tags"><span>Soil carbon</span><span>Pilot first</span></div></div></div>
+        <div class="card step"><span class="stepno">03</span><div><span class="eyebrow">FOLLOWING SEASON</span><h3>Scale what proves itself</h3><p>Compare soil moisture, crop stress, input use and yield before expanding the practice.</p><div class="tags"><span>Evidence-based</span><span>Outcome verified</span></div></div></div>
+      </div>
+    </section>
+
+    <section id="network" class="view">
+      <div class="section-intro"><span class="pill blue">Interoperability</span><h2>BRICS knowledge network</h2><p>Local data stays under local governance; compatible models and aggregated evidence can improve shared intelligence.</p></div>
+      <div class="network-map card">
+        <div class="node india">🇮🇳<b>India</b><small>Local evidence</small></div>
+        <div class="node brazil">🇧🇷<b>Brazil</b><small>Local evidence</small></div>
+        <div class="node sa">🇿🇦<b>South Africa</b><small>Local evidence</small></div>
+        <div class="node china">🇨🇳<b>China</b><small>Local evidence</small></div>
+        <div class="node russia">🇷🇺<b>Russia</b><small>Local evidence</small></div>
+        <div class="core"><strong>Shared intelligence</strong><span>Models • schemas • evidence</span><small>No raw farmer records required</small></div>
+      </div>
+      <div class="grid three">
+        <div class="card metric"><span>Model round</span><strong>R-14</strong><em class="ok">5 nodes</em><small>last simulated update</small></div>
+        <div class="card metric"><span>Evidence cases</span><strong>12,480</strong><em class="ok">+6.2%</em><small>network-wide demo index</small></div>
+        <div class="card metric"><span>Data sovereignty</span><strong>Local</strong><em class="ok">Policy-aware</em><small>raw data stays local</small></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <button class="close" onclick="closeModal()">×</button>
+      <span class="pill green">Localized advisory</span>
+      <h2>Mulch + staged irrigation</h2>
+      <p>Recommended because the current field fingerprint strongly matches 31 comparable observations where the intervention reduced water stress without a material yield penalty.</p>
+      <div class="advisory-grid">
+        <div><span>WHEN</span><b>Next 48 hours</b></div>
+        <div><span>WHY</span><b>Dry spell + low moisture</b></div>
+        <div><span>TRANSFER CONFIDENCE</span><b>81%</b></div>
+        <div><span>MAIN TRADE-OFF</span><b>Extra labor</b></div>
+      </div>
+      <div class="evidence"><strong>Evidence:</strong> India 31 observations • Brazil 18 • South Africa 27. Results are simulated for this prototype.</div>
+      <button class="primary full" onclick="closeModal(); toast('Advisory saved to field plan')">Accept & add to plan</button>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
